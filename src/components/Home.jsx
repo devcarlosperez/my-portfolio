@@ -6,7 +6,7 @@ const Home = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
           
-          {/* Columna Izquierda: Información */}
+          {/* Left Column: Info */}
           <div className="flex-1 text-center md:text-left">
             <div className="flex justify-center md:justify-start items-center gap-3 mb-4">
                <span className="w-7 h-px bg-gray-400"></span>
@@ -26,7 +26,7 @@ const Home = () => {
               Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web funcionales, robustas y escalables. Busco mi primera oportunidad para aportar valor y seguir creciendo profesionalmente.
             </p>
 
-            {/* Accesos rápidos */}
+            {/* Quick Actions */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
               <a href="#contact" className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-black hover:scale-105 transition-all duration-300">
                 Contacto
@@ -43,13 +43,13 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Columna Derecha: Imagen */}
+          {/* Right Column: Image */}
           <div className="flex-1 flex justify-center md:justify-end relative">
             <div className="relative w-72 h-72 md:w-100 md:h-100">
-              {/* Forma orgánica de fondo similar a la referencia */}
+              {/* Blob background */}
               <div className="absolute inset-0 bg-gray-200 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-[blob_7s_infinite] opacity-50"></div>
               
-              {/* Contenedor de imagen con borde suave */}
+              {/* Image container */}
               <div className="absolute inset-2 bg-white rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-white flex items-center justify-center">
                  {/* <img src="/tu-foto.jpg" alt="Perfil" className="w-full h-full object-cover" /> */}
                  <span className="text-gray-400 font-medium">Tu Foto</span>
@@ -59,27 +59,104 @@ const Home = () => {
 
         </div>
 
-        {/* 3 Bloques de Valor - Estilo "Stats" minimalista */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
-          <div className="bg-white p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-transform border border-gray-100/50">
-            <h3 className="text-gray-900 font-bold text-lg mb-2 flex items-center gap-2">
-              <i className="fa-solid fa-code text-xl"></i> Tecnologías
-            </h3>
-            <p className="text-gray-500 text-sm">React, JavaScript, Node.js, Java, MySQL, Tailwind.</p>
+        {/* 3 Value Blocks */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+          
+          {/* Card 1: Technologies */}
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+            <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Tecnologías</h3>
+            <div className="grid grid-cols-2 gap-y-4 gap-x-8 w-fit mx-auto">
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">React</h4>
+                   <span className="text-xs text-gray-500 block">Intermedio</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Node.js</h4>
+                   <span className="text-xs text-gray-500 block">Básico</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Express</h4>
+                   <span className="text-xs text-gray-500 block">Básico</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">SQL/Oracle</h4>
+                   <span className="text-xs text-gray-500 block">Básico</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Git/GitHub</h4>
+                   <span className="text-xs text-gray-500 block">Intermedio</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Java</h4>
+                   <span className="text-xs text-gray-500 block">Básico</span>
+                 </div>
+               </article>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-transform border border-gray-100/50">
-             <h3 className="text-gray-900 font-bold text-lg mb-2 flex items-center gap-2">
-              <i className="fa-solid fa-shield-halved text-xl"></i> Fortalezas
-            </h3>
-            <p className="text-gray-500 text-sm">Código limpio, adaptabilidad y resolución proactiva.</p>
+          {/* Card 2: Strengths */}
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+             <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Fortalezas</h3>
+             <div className="grid grid-cols-1 gap-4 w-fit mx-auto">
+                <article className="flex gap-3 items-center">
+                  <i className="fa-solid fa-circle-check text-black"></i>
+                  <h4 className="font-semibold text-gray-700 text-sm">Proactividad y Entusiasmo</h4>
+                </article>
+                <article className="flex gap-3 items-center">
+                  <i className="fa-solid fa-circle-check text-black"></i>
+                  <h4 className="font-semibold text-gray-700 text-sm">Trabajo en equipo</h4>
+                </article>
+                <article className="flex gap-3 items-center">
+                  <i className="fa-solid fa-circle-check text-black"></i>
+                  <h4 className="font-semibold text-gray-700 text-sm">Adaptabilidad</h4>
+                </article>
+                <article className="flex gap-3 items-center">
+                  <i className="fa-solid fa-circle-check text-black"></i>
+                  <h4 className="font-semibold text-gray-700 text-sm">Creatividad</h4>
+                </article>
+                <article className="flex gap-3 items-center">
+                  <i className="fa-solid fa-circle-check text-black"></i>
+                  <h4 className="font-semibold text-gray-700 text-sm">Persistencia</h4>
+                </article>
+             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-transform border border-gray-100/50">
-             <h3 className="text-gray-900 font-bold text-lg mb-2 flex items-center gap-2">
-              <i className="fa-solid fa-briefcase text-xl"></i> Objetivo
-            </h3>
-            <p className="text-gray-500 text-sm">Prácticas o Junior Full Stack (Remoto/Híbrido).</p>
+          {/* Card 3: Objective */}
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+             <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Objetivo</h3>
+             <div className="space-y-6 text-center">
+                <div>
+                   <h4 className="font-bold text-gray-800 text-lg mb-1">Puesto Buscado</h4>
+                   <p className="text-gray-500 text-sm">Desarrollador Junior / Prácticas</p>
+                </div>
+                <div className="w-16 h-[1px] bg-gray-200 mx-auto"></div>
+                <div>
+                   <h4 className="font-bold text-gray-800 text-lg mb-1">Modalidad</h4>
+                   <p className="text-gray-500 text-sm">Remoto / Híbrido / Presencial</p>
+                </div>
+                <div className="w-16 h-[1px] bg-gray-200 mx-auto"></div>
+                <div>
+                   <h4 className="font-bold text-gray-800 text-lg mb-1">Enfoque</h4>
+                   <p className="text-gray-500 text-sm">Full Stack Web Development</p>
+                </div>
+             </div>
           </div>
         </div>
       </div>
