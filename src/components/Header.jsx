@@ -1,7 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'projects', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const getLinkClasses = (section) => `text-base font-medium transition-colors ${
+    activeSection === section ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'
+  }`;
 
   return (
     <header className="fixed w-full top-0 left-0 z-50 bg-neutral-50/90 backdrop-blur-sm shadow-sm transition-all duration-300">
@@ -9,25 +36,25 @@ const Header = () => {
         <a href="#home" className="text-neutral-800 font-semibold text-xl">devcarlosperez</a>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex">
+        <div className="hidden min-[833px]:flex">
           <ul className="flex gap-8">
             <li className="nav-item">
-              <a href="#home" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Inicio</a>
+              <a href="#home" className={getLinkClasses('home')}>Inicio</a>
             </li>
             <li className="nav-item">
-              <a href="#about" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Mi Perfil</a>
+              <a href="#about" className={getLinkClasses('about')}>Mi Perfil</a>
             </li>
             <li className="nav-item">
-              <a href="#projects" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Proyectos</a>
+              <a href="#projects" className={getLinkClasses('projects')}>Proyectos</a>
             </li>
             <li className="nav-item">
-              <a href="#contact" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Contacto</a>
+              <a href="#contact" className={getLinkClasses('contact')}>Contacto</a>
             </li>
           </ul>
         </div>
         
         {/* Mobile Menu Button - Hamburger */}
-        <div className="md:hidden text-neutral-800">
+        <div className="min-[833px]:hidden text-neutral-800">
            <button onClick={() => setIsOpen(true)} className="focus:outline-none cursor-pointer" aria-label="Abrir menú">
              <i className="fa-solid fa-bars text-2xl"></i>
            </button>
@@ -35,13 +62,13 @@ const Header = () => {
 
         {/* Overlay */}
         <div 
-          className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+          className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 min-[833px]:hidden ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
           onClick={() => setIsOpen(false)}
         ></div>
 
         {/* Mobile Menu Sidebar */}
         <div className={`
-          fixed top-0 right-0 h-screen w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden
+          fixed top-0 right-0 h-screen w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out min-[833px]:hidden
           ${isOpen ? 'translate-x-0' : 'translate-x-full'}
         `}>
            <div className="flex justify-end p-6">
@@ -52,16 +79,16 @@ const Header = () => {
            
            <ul className="flex flex-col px-8 gap-6 mt-2">
             <li>
-              <a href="#home" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Inicio</a>
+              <a href="#home" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'home' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Inicio</a>
             </li>
             <li>
-              <a href="#about" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Mi Perfil</a>
+              <a href="#about" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'about' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Mi Perfil</a>
             </li>
             <li>
-              <a href="#projects" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Proyectos</a>
+              <a href="#projects" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'projects' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Proyectos</a>
             </li>
             <li>
-              <a href="#contact" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Contacto</a>
+              <a href="#contact" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'contact' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Contacto</a>
             </li>
           </ul>
         </div>

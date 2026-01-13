@@ -5,7 +5,10 @@ const Introduction = () => {
   useEffect(() => {
     const typed = new Typed(".typed-element", {
       strings: ["¡Hola! Soy<br/>Carlos"],
-      typeSpeed: 100,
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: false,
       showCursor: false,
       html: true,
     });
@@ -19,25 +22,19 @@ const Introduction = () => {
       className="min-h-screen pt-32 pb-16 flex items-center justify-center bg-gray-50"
     >
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+        <div className="flex flex-col-reverse min-[833px]:flex-row items-center gap-12 min-[833px]:gap-20">
           {/* Left Column: Info */}
-          <div className="flex-1 text-center md:text-left">
-            <div className="flex justify-center md:justify-start items-center gap-3 mb-4">
-              <span className="w-7 h-px bg-gray-400"></span>
-              <span className="font-medium text-gray-500 uppercase tracking-widest text-sm">
-                Estudiante de Desarrollo Web
-              </span>
-            </div>
+          <div className="flex-1 text-center min-[833px]:text-left">
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-4xl min-[833px]:text-6xl font-bold text-gray-900 leading-tight mb-4">
               <span className="typed-element"></span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-gray-600 font-medium mb-6">
+            <h2 className="text-xl min-[833px]:text-2xl text-gray-600 font-medium mb-6">
               Desarrollador Junior | React + Node.js | APIs REST
             </h2>
 
-            <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
+            <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-2xl mx-auto min-[833px]:mx-0">
               Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por
               la tecnología y la innovación. Me especializo en crear
               aplicaciones web funcionales, robustas y escalables. Busco mi
@@ -46,7 +43,7 @@ const Introduction = () => {
             </p>
 
             {/* Quick Actions */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
+            <div className="flex flex-wrap justify-center min-[833px]:justify-start gap-4 mb-10">
               <a
                 href="#contact"
                 className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-black hover:scale-105 transition-all duration-300"
@@ -61,7 +58,7 @@ const Introduction = () => {
               </a>
             </div>
 
-            <div className="flex justify-center md:justify-start gap-8 text-gray-600 items-center">
+            <div className="flex justify-center min-[833px]:justify-start gap-8 text-gray-600 items-center">
               <a
                 href="https://github.com/devcarlosperez"
                 target="_blank"
@@ -99,8 +96,8 @@ const Introduction = () => {
           </div>
 
           {/* Right Column: Image */}
-          <div className="flex-1 flex justify-center md:justify-end relative">
-            <div className="relative w-72 h-72 md:w-100 md:h-100">
+          <div className="flex-1 flex justify-center min-[833px]:justify-end relative">
+            <div className="relative w-72 h-72 min-[833px]:w-100 min-[833px]:h-100">
               {/* Blob background */}
               <div className="absolute inset-0 bg-gray-200 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-[blob_7s_infinite] opacity-50"></div>
 

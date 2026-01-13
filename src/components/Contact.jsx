@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Contacto</h2>
         
-        <div className="flex flex-col md:flex-row items-center gap-20 max-w-4xl mx-auto">
+        <div className="flex flex-col min-[833px]:flex-row items-center gap-20 max-w-4xl mx-auto">
           {/* Left: Contact Info */}
           <div className="flex-1">
             <div className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-center">
@@ -54,8 +54,8 @@ const Contact = () => {
           </div>
           
           {/* Right: GIF */}
-          <div className="flex-1">
-            <div className="bg-white rounded-full overflow-hidden shadow-2xl border-4 border-white h-96 aspect-square">
+          <div className="flex-1 max-w-full">
+            <div className="bg-white rounded-full overflow-hidden shadow-2xl border-4 border-white h-96 aspect-square max-w-full">
               <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM0bmJod282eWZ5N3E3ZnM3bzVrcTl1bHRhd29ubW4ydm83aDh2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ptqAPgghLtHOa0SLJS/giphy.gif" alt="Contact animation" className="w-full h-full object-cover" />
             </div>
           </div>
