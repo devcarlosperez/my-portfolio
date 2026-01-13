@@ -2,41 +2,15 @@ import React from "react";
 
 const MyProfile = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 border-gray-200 border-2">
       <div className="container mx-auto px-6 max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
           Mi Perfil
         </h2>
         
         <div className="space-y-8">
-            {/* 1. Experiencia Laboral */}
-            <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                   <i className="fa-solid fa-briefcase text-gray-700 text-xl"></i> Experiencia Laboral
-                </h3>
-                <div className="relative pl-8 border-l-2 border-gray-200 space-y-10">
-                    <div className="relative group">
-                        {/* Dot */}
-                        <span className="absolute -left-[41px] top-1.5 h-5 w-5 rounded-full border-4 border-white bg-gray-900 group-hover:scale-110 transition-transform"></span>
-                        
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
-                           <h4 className="text-xl font-bold text-gray-800">Prácticas / Desarrollador Junior</h4>
-                           <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-fit">05/2025 – 09/2025</span>
-                        </div>
-                        
-                        <div className="text-base text-gray-700 font-semibold mb-3">
-                            Centro de Estudios KUMA
-                        </div>
-                        
-                        <p className="text-gray-600 leading-relaxed max-w-3xl">
-                             Desarrollo de aplicación en Odoo. Apoyo en tareas de desarrollo y mantenimiento de sistemas ERP. Colaboración con el equipo técnico para la implementación de nuevas funcionalidades.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* 2. Tecnologías y Habilidades Duras */}
+                {/* 2. Technologies and Hard Skills */}
                 <div className="flex flex-col gap-8">
                    <div className="bg-white p-8 rounded-[2rem] border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 flex-1">
                         <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -98,7 +72,7 @@ const MyProfile = () => {
                    </div>
                 </div>
 
-                {/* 3. Habilidades Blandas */}
+                {/* 3. Soft Skills */}
                 <div className="flex flex-col h-full">
                     <div className="bg-white p-8 rounded-[2rem] border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 h-full">
                         <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -133,6 +107,31 @@ const MyProfile = () => {
                 </div>
             </div>
 
+            {/* 1. Work Experience */}
+            <div className="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                   <i className="fa-solid fa-briefcase text-gray-700"></i> Experiencia Laboral
+                </h3>
+                <div className="relative pl-8 border-l-2 border-gray-200 space-y-10">
+                    <div className="relative group">
+                        {/* Dot */}
+                        <span className="absolute -left-[41px] top-1.5 h-5 w-5 rounded-full border-4 border-white bg-gray-900 group-hover:scale-110 transition-transform"></span>
+                        
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                           <h4 className="text-xl font-bold text-gray-800">Prácticas / Desarrollador Junior</h4>
+                           <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-fit">05/2025 – 09/2025</span>
+                        </div>
+                        
+                        <div className="text-base text-gray-700 font-semibold mb-3">
+                            Centro de Estudios KUMA
+                        </div>
+                        
+                        <p className="text-gray-600 leading-relaxed max-w-3xl">
+                             Desarrollo de aplicación en Odoo. Apoyo en tareas de desarrollo y mantenimiento de sistemas ERP. Colaboración con el equipo técnico para la implementación de nuevas funcionalidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </section>
