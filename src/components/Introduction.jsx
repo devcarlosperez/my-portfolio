@@ -67,6 +67,7 @@ const Introduction = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="text-4xl hover:text-black transition-colors"
+                aria-label="GitHub de Carlos Pérez"
               >
                 <i className="fa-brands fa-github"></i>
               </a>
@@ -75,12 +76,14 @@ const Introduction = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="text-4xl hover:text-blue-700 transition-colors"
+                aria-label="LinkedIn de Carlos Pérez"
               >
                 <i className="fa-brands fa-linkedin"></i>
               </a>
               <a
                 href="mailto:carlosperezsantana04@gmail.com"
                 className="text-4xl hover:text-red-500 transition-colors"
+                aria-label="Enviar email a Carlos Pérez"
               >
                 <i className="fa-solid fa-envelope"></i>
               </a>
