@@ -37,9 +37,9 @@ const Home = () => {
             </div>
 
             <div className="flex justify-center md:justify-start gap-8 text-gray-600 items-center">
-               <a href="https://github.com" target="_blank" rel="noreferrer" className="text-4xl hover:text-black transition-colors"><i className="fa-brands fa-github"></i></a>
-               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-4xl hover:text-blue-700 transition-colors"><i className="fa-brands fa-linkedin"></i></a>
-               <a href="/cv.pdf" target="_blank" className="text-lg font-medium hover:text-black underline underline-offset-4 flex items-center">Descargar CV</a>
+               <a href="https://github.com/devcarlosperez" target="_blank" rel="noreferrer" className="text-4xl hover:text-black transition-colors"><i className="fa-brands fa-github"></i></a>
+               <a href="https://www.linkedin.com/in/carlos-p%C3%A9rez-santana-3967a83a5/" target="_blank" rel="noreferrer" className="text-4xl hover:text-blue-700 transition-colors"><i className="fa-brands fa-linkedin"></i></a>
+               <a href="/cv.pdf" download="cv.pdf" target="_blank" className="text-lg font-medium hover:text-black underline underline-offset-4 flex items-center">Descargar CV</a>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ const Home = () => {
               {/* Image container */}
               <div className="absolute inset-2 bg-white rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-white flex items-center justify-center">
                  {/* <img src="/tu-foto.jpg" alt="Perfil" className="w-full h-full object-cover" /> */}
-                 <span className="text-gray-400 font-medium">Tu Foto</span>
+                 <span className="text-gray-400 font-medium">Foto</span>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           
           {/* Card 1: Technologies */}
-          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
             <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Tecnologías</h3>
             <div className="grid grid-cols-2 gap-y-4 gap-x-8 w-fit mx-auto">
                <article className="flex gap-3 justify-start">
@@ -84,7 +84,7 @@ const Home = () => {
                  <i className="fa-solid fa-circle-check text-black mt-1"></i>
                  <div>
                    <h4 className="font-semibold text-gray-800 text-sm">Express</h4>
-                   <span className="text-xs text-gray-500 block">Básico</span>
+                   <span className="text-xs text-gray-500 block">Intermedio</span>
                  </div>
                </article>
                <article className="flex gap-3 justify-start">
@@ -108,16 +108,30 @@ const Home = () => {
                    <span className="text-xs text-gray-500 block">Básico</span>
                  </div>
                </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Postman</h4>
+                   <span className="text-xs text-gray-500 block">Intermedio</span>
+                 </div>
+               </article>
+               <article className="flex gap-3 justify-start">
+                 <i className="fa-solid fa-circle-check text-black mt-1"></i>
+                 <div>
+                   <h4 className="font-semibold text-gray-800 text-sm">Figma</h4>
+                   <span className="text-xs text-gray-500 block">Básico</span>
+                 </div>
+               </article>
             </div>
           </div>
 
           {/* Card 2: Strengths */}
-          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
              <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Fortalezas</h3>
              <div className="grid grid-cols-1 gap-4 w-fit mx-auto">
                 <article className="flex gap-3 items-center">
                   <i className="fa-solid fa-circle-check text-black"></i>
-                  <h4 className="font-semibold text-gray-700 text-sm">Proactividad y Entusiasmo</h4>
+                  <h4 className="font-semibold text-gray-700 text-sm">Proactividad</h4>
                 </article>
                 <article className="flex gap-3 items-center">
                   <i className="fa-solid fa-circle-check text-black"></i>
@@ -139,7 +153,7 @@ const Home = () => {
           </div>
 
           {/* Card 3: Objective */}
-          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-8 rounded-[2rem] border border-gray-300 ring-1 ring-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
              <h3 className="text-gray-800 font-bold text-xl mb-6 text-center">Objetivo</h3>
              <div className="space-y-6 text-center">
                 <div>

@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="fixed w-full top-0 left-0 z-50 bg-neutral-50/90 backdrop-blur-sm shadow-sm">
       <nav className="container mx-auto px-6 h-16 flex justify-between items-center">
-        <a href="#home" className="text-neutral-800 font-semibold text-xl">Portafolio</a>
+        <a href="#home" className="text-neutral-800 font-semibold text-xl">devcarlosperez</a>
         
         <div className="hidden md:flex">
           <ul className="flex gap-8">
@@ -12,10 +12,10 @@ function Header() {
               <a href="#home" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Inicio</a>
             </li>
             <li className="nav-item">
-              <a href="#about" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Sobre mí</a>
+              <a href="#about" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Mi Perfil</a>
             </li>
             <li className="nav-item">
-              <a href="#skills" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Competencias</a>
+              <a href="#skills" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Proyectos</a>
             </li>
             <li className="nav-item">
               <a href="#contact" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Contacto</a>
