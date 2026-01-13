@@ -30,9 +30,9 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Mis Proyectos</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div key={project.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-square bg-gray-100 relative group">
                 <img 
                   src={project.image} 

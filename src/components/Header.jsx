@@ -28,7 +28,7 @@ const Header = () => {
         
         {/* Mobile Menu Button - Hamburger */}
         <div className="md:hidden text-neutral-800">
-           <button onClick={() => setIsOpen(true)} className="focus:outline-none">
+           <button onClick={() => setIsOpen(true)} className="focus:outline-none cursor-pointer">
              <i className="fa-solid fa-bars text-2xl"></i>
            </button>
         </div>
@@ -45,7 +45,7 @@ const Header = () => {
           ${isOpen ? 'translate-x-0' : 'translate-x-full'}
         `}>
            <div className="flex justify-end p-6">
-             <button onClick={() => setIsOpen(false)} className="focus:outline-none">
+             <button onClick={() => setIsOpen(false)} className="focus:outline-none cursor-pointer">
                <i className="fa-solid fa-xmark text-2xl text-neutral-800 hover:text-red-500 transition-colors"></i>
              </button>
            </div>
