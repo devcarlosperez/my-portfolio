@@ -51,7 +51,7 @@ const Introduction = () => {
                 href="#contact"
                 className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-black hover:scale-105 transition-all duration-300"
               >
-                Contacto
+                Contactar
               </a>
               <a
                 href="#projects"
@@ -97,8 +97,7 @@ const Introduction = () => {
 
               {/* Image container */}
               <div className="absolute inset-2 bg-white rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-white flex items-center justify-center">
-                {/* <img src="/tu-foto.jpg" alt="Perfil" className="w-full h-full object-cover" /> */}
-                <span className="text-gray-400 font-medium">Foto</span>
+                <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding animation" className="w-full h-full object-cover rounded-[60%_40%_30%_70%/60%_30%_70%_40%]" />
               </div>
             </div>
           </div>

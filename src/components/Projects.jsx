@@ -5,21 +5,21 @@ const Projects = () => {
     {
       id: 1,
       title: "CanAccesible",
-      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+One", 
+      image: "/canaccesible.webp", 
       github: "https://github.com/devcarlosperez/CanAccesible",
       live: "https://canaccesible.es/"
     },
     {
       id: 2,
       title: "The Lord Of The Rings",
-      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Two",
+      image: "/lord-of-the-rings.webp",
       github: "https://github.com/devcarlosperez/the-lord-of-the-rings-project",
       live: "https://lord-of-the-rings-4444a.web.app/characters"
     },
     {
       id: 3,
       title: "HelloJapan",
-      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Three",
+      image: "/hello-japan.webp",
       github: "https://github.com/devcarlosperez/japan-project",
       live: "https://hellojapan-3523b.web.app/index.html"
     }
@@ -33,7 +33,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-video bg-gray-100 relative group">
+              <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-square bg-gray-100 relative group">
                 <img 
                   src={project.image} 
                   alt={project.title} 
