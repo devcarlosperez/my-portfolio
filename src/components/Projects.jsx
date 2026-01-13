@@ -1,0 +1,72 @@
+import React from 'react';
+
+const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "CanAccesible",
+      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+One", 
+      github: "https://github.com/devcarlosperez/CanAccesible",
+      live: "https://canaccesible.es/"
+    },
+    {
+      id: 2,
+      title: "The Lord Of The Rings",
+      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Two",
+      github: "https://github.com/devcarlosperez/the-lord-of-the-rings-project",
+      live: "https://lord-of-the-rings-4444a.web.app/characters"
+    },
+    {
+      id: 3,
+      title: "HelloJapan",
+      image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Three",
+      github: "https://github.com/devcarlosperez/japan-project",
+      live: "https://hellojapan-3523b.web.app/index.html"
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Mis Proyectos</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div key={project.id} className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-video bg-gray-100 relative group">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 text-center mb-6">{project.title}</h3>
+              
+              <div className="flex justify-center gap-4">
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                >
+                  Github
+                </a>
+                <a 
+                  href={project.live} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                >
+                  Live
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Typed from "typed.js";
 
-const Home = () => {
+const Introduction = () => {
   useEffect(() => {
     const typed = new Typed(".typed-element", {
       strings: ["¡Hola! Soy<br/>Carlos"],
@@ -284,4 +284,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Introduction;

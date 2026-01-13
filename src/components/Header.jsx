@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Header() {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ function Header() {
               <a href="#about" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Mi Perfil</a>
             </li>
             <li className="nav-item">
-              <a href="#skills" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Proyectos</a>
+              <a href="#projects" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Proyectos</a>
             </li>
             <li className="nav-item">
               <a href="#contact" className="text-neutral-800 font-medium hover:text-neutral-500 transition-colors">Contacto</a>
@@ -58,7 +58,7 @@ function Header() {
               <a href="#about" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Mi Perfil</a>
             </li>
             <li>
-              <a href="#skills" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Proyectos</a>
+              <a href="#projects" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Proyectos</a>
             </li>
             <li>
               <a href="#contact" onClick={() => setIsOpen(false)} className="block text-lg text-neutral-800 font-medium hover:text-neutral-500 transition-colors border-b border-gray-100 pb-2">Contacto</a>

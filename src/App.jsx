@@ -1,12 +1,16 @@
 import Header from "./components/Header"
-import Home from "./components/Home"
+import Introduction from "./components/Introduction"
+import Projects from "./components/Projects"
 import './App.css'
 
 function App() {
   return (
     <>
       <Header/>
-      <Home/>
+      <main>
+        <Introduction/>
+        <Projects/>
+      </main>
     </>
   )
 }
