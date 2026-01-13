@@ -1,7 +1,11 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="py-8 bg-gray-900 text-white text-center">
-      <p>Copyright © 2026 devcarlosperez. All Rights Reserved.</p>
+      <p>{t('footer')}</p>
     </footer>
   );
 };

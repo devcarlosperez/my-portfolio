@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "My Profile",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hello! I'm<br/>Carlos",
+    "subtitle": "Junior Developer | React + Node.js | REST APIs",
+    "description": "I am a Web Application Development student, passionate about technology and innovation. I specialize in creating functional, robust, and scalable web applications. I am looking for my first opportunity to add value and continue growing professionally.",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV",
+    "viewProjects": "View Projects"
+  },
+  "profile": {
+    "title": "My Profile",
+    "technologies": "Technologies",
+    "hardSkills": "Hard Skills",
+    "languages": "Languages",
+    "spanish": "Spanish",
+    "native": "Native",
+    "english": "English",
+    "basic": "Basic (A2)",
+    "knowledge": "Knowledge",
+    "apiDev": "REST APIs Development",
+    "oop": "Object-Oriented Programming",
+    "sql": "SQL Databases",
+    "responsive": "Responsive Design",
+    "softSkills": "Soft Skills",
+    "softDesc": "My personal strengths that I bring to the team to foster a productive and collaborative environment.",
+    "proactivity": "Proactivity",
+    "proactivityDesc": "Initiative to anticipate needs and propose solutions.",
+    "teamwork": "Teamwork",
+    "teamworkDesc": "Effective collaboration and transparent communication.",
+    "adaptability": "Adaptability",
+    "adaptabilityDesc": "Flexibility in the face of changes and new challenges.",
+    "problemSolving": "Problem Solving",
+    "problemSolvingDesc": "Analytical approach to overcome technical obstacles.",
+    "workExperience": "Work Experience",
+    "jobTitle": "Internship / Junior Developer",
+    "company": "Centro de Estudios KUMA",
+    "jobDescription": "Development of application in Odoo. Support in development and maintenance tasks of ERP systems. Collaboration with the technical team for the implementation of new functionalities."
+  },
+  "projects": {
+    "title": "My Projects",
+    "github": "GitHub",
+    "live": "Live"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "availabilityDesc": "Open to job opportunities",
+    "social": "Social Networks"
+  },
+  "footer": "Copyright © 2026 devcarlosperez. All Rights Reserved."
+}

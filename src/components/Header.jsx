@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -26,6 +28,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   const getLinkClasses = (section) => `text-base font-medium transition-colors ${
     activeSection === section ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'
   }`;
@@ -36,21 +42,29 @@ const Header = () => {
         <a href="#home" className="text-neutral-800 font-semibold text-xl">devcarlosperez</a>
         
         {/* Desktop Menu */}
-        <div className="hidden min-[833px]:flex">
+        <div className="hidden min-[833px]:flex items-center gap-8">
           <ul className="flex gap-8">
             <li className="nav-item">
-              <a href="#home" className={getLinkClasses('home')}>Inicio</a>
+              <a href="#home" className={getLinkClasses('home')}>{t('nav.home')}</a>
             </li>
             <li className="nav-item">
-              <a href="#about" className={getLinkClasses('about')}>Mi Perfil</a>
+              <a href="#about" className={getLinkClasses('about')}>{t('nav.about')}</a>
             </li>
             <li className="nav-item">
-              <a href="#projects" className={getLinkClasses('projects')}>Proyectos</a>
+              <a href="#projects" className={getLinkClasses('projects')}>{t('nav.projects')}</a>
             </li>
             <li className="nav-item">
-              <a href="#contact" className={getLinkClasses('contact')}>Contacto</a>
+              <a href="#contact" className={getLinkClasses('contact')}>{t('nav.contact')}</a>
             </li>
           </ul>
+          <button 
+            onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')} 
+            className="text-neutral-800 hover:text-blue-600 transition-colors font-medium flex items-center gap-2 cursor-pointer"
+            aria-label="Cambiar idioma"
+          >
+            <i className="fa-solid fa-globe text-lg"></i>
+            <span>{i18n.language === 'es' ? 'EN' : 'ES'}</span>
+          </button>
         </div>
         
         {/* Mobile Menu Button - Hamburger */}
@@ -79,16 +93,25 @@ const Header = () => {
            
            <ul className="flex flex-col px-8 gap-6 mt-2">
             <li>
-              <a href="#home" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'home' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Inicio</a>
+              <a href="#home" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'home' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>{t('nav.home')}</a>
             </li>
             <li>
-              <a href="#about" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'about' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Mi Perfil</a>
+              <a href="#about" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'about' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>{t('nav.about')}</a>
             </li>
             <li>
-              <a href="#projects" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'projects' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Proyectos</a>
+              <a href="#projects" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'projects' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>{t('nav.projects')}</a>
             </li>
             <li>
-              <a href="#contact" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'contact' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>Contacto</a>
+              <a href="#contact" onClick={() => setIsOpen(false)} className={`block text-lg font-medium transition-colors border-b border-gray-100 pb-2 ${activeSection === 'contact' ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'}`}>{t('nav.contact')}</a>
+            </li>
+            <li>
+              <button 
+                onClick={() => { changeLanguage(i18n.language === 'es' ? 'en' : 'es'); setIsOpen(false); }} 
+                className="w-full text-left flex items-center gap-3 text-lg font-medium text-neutral-800 hover:text-neutral-500 border-b border-gray-100 pb-2 cursor-pointer"
+              >
+                <i className="fa-solid fa-globe text-xl"></i>
+                <span>{i18n.language === 'es' ? 'English' : 'Español'}</span>
+              </button>
             </li>
           </ul>
         </div>

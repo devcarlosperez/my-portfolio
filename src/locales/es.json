@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Mi Perfil",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "intro": {
+    "greeting": "¡Hola! Soy<br/>Carlos",
+    "subtitle": "Desarrollador Junior | React + Node.js | APIs REST",
+    "description": "Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web funcionales, robustas y escalables. Busco mi primera oportunidad para aportar valor y seguir creciendo profesionalmente.",
+    "contactMe": "Contáctame",
+    "downloadCV": "Descargar CV",
+    "viewProjects": "Ver Proyectos"
+  },
+  "profile": {
+    "title": "Mi Perfil",
+    "technologies": "Tecnologías",
+    "hardSkills": "Habilidades Duras",
+    "languages": "Idiomas",
+    "spanish": "Español",
+    "native": "Nativo",
+    "english": "Inglés",
+    "basic": "Básico (A2)",
+    "knowledge": "Conocimientos",
+    "apiDev": "Desarrollo APIs REST",
+    "oop": "Programación Orientada a Objetos",
+    "sql": "Bases de Datos SQL",
+    "responsive": "Diseño Responsive",
+    "softSkills": "Habilidades Blandas",
+    "softDesc": "Mis fortalezas personales que aporto al equipo de trabajo para fomentar un ambiente productivo y colaborativo.",
+    "proactivity": "Proactividad",
+    "proactivityDesc": "Iniciativa para anticipar necesidades y proponer soluciones.",
+    "teamwork": "Trabajo en Equipo",
+    "teamworkDesc": "Colaboración efectiva y comunicación transparente.",
+    "adaptability": "Adaptabilidad",
+    "adaptabilityDesc": "Flexibilidad ante cambios y nuevos desafíos.",
+    "problemSolving": "Resolución de Problemas",
+    "problemSolvingDesc": "Enfoque analítico para superar obstáculos técnicos.",
+    "workExperience": "Experiencia Laboral",
+    "jobTitle": "Prácticas / Desarrollador Junior",
+    "company": "Centro de Estudios KUMA",
+    "jobDescription": "Desarrollo de aplicación en Odoo. Apoyo en tareas de desarrollo y mantenimiento de sistemas ERP. Colaboración con el equipo técnico para la implementación de nuevas funcionalidades."
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "github": "Github",
+    "live": "Live"
+  },
+  "contact": {
+    "title": "Contacto",
+    "email": "Email",
+    "location": "Ubicación",
+    "availability": "Disponibilidad",
+    "availabilityDesc": "Abierto a oportunidades de trabajo",
+    "social": "Redes Sociales"
+  },
+  "footer": "Copyright © 2026 devcarlosperez. All Rights Reserved."
+}

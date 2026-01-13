@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Contacto</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t('contact.title')}</h2>
         
         <div className="flex flex-col min-[833px]:flex-row items-center gap-20 max-w-4xl mx-auto">
           {/* Left: Contact Info */}
@@ -12,22 +14,22 @@ const Contact = () => {
             <div className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-center">
               <div className="space-y-8">
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.email')}</h3>
                   <p className="text-gray-600 text-sm md:text-base">carlosperezsantana04@gmail.com</p>
                 </div>
                 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Ubicación</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.location')}</h3>
                   <p className="text-gray-600 text-sm md:text-base">Las Palmas de Gran Canaria, Gran Canaria</p>
                 </div>
                 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Disponibilidad</h3>
-                  <p className="text-gray-600 text-sm md:text-base">Abierto a oportunidades de trabajo</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.availability')}</h3>
+                  <p className="text-gray-600 text-sm md:text-base">{t('contact.availabilityDesc')}</p>
                 </div>
 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Redes Sociales</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('contact.social')}</h3>
                   <div className="flex justify-center md:justify-start gap-6">
                     <a 
                       href="https://github.com/devcarlosperez" 

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
   const projects = [
     {
       id: 1,
@@ -28,7 +30,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Mis Proyectos</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t('projects.title')}</h2>
         
         <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project) => (
@@ -50,7 +52,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
                 >
-                  Github
+                  {t('projects.github')}
                 </a>
                 <a 
                   href={project.live} 
@@ -58,7 +60,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
                 >
-                  Live
+                  {t('projects.live')}
                 </a>
               </div>
             </div>

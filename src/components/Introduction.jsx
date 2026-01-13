@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import Typed from "typed.js";
+import { useTranslation } from 'react-i18next';
 
 const Introduction = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     const typed = new Typed(".typed-element", {
-      strings: ["¡Hola! Soy<br/>Carlos"],
+      strings: [t('intro.greeting')],
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 1000,
@@ -15,7 +17,7 @@ const Introduction = () => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [t]);
   return (
     <section
       id="home"
@@ -31,15 +33,11 @@ const Introduction = () => {
             </h1>
 
             <h2 className="text-xl min-[833px]:text-2xl text-gray-600 font-medium mb-6">
-              Desarrollador Junior | React + Node.js | APIs REST
+              {t('intro.subtitle')}
             </h2>
 
             <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-2xl mx-auto min-[833px]:mx-0">
-              Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por
-              la tecnología y la innovación. Me especializo en crear
-              aplicaciones web funcionales, robustas y escalables. Busco mi
-              primera oportunidad para aportar valor y seguir creciendo
-              profesionalmente.
+              {t('intro.description')}
             </p>
 
             {/* Quick Actions */}
@@ -48,13 +46,13 @@ const Introduction = () => {
                 href="#contact"
                 className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-black hover:scale-105 transition-all duration-300"
               >
-                Contactar
+                {t('intro.contactMe')}
               </a>
               <a
                 href="#projects"
                 className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-semibold shadow hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 flex items-center gap-2"
               >
-                Ver Proyectos <i className="fa-solid fa-arrow-right"></i>
+                {t('intro.viewProjects')} <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
 
@@ -90,7 +88,7 @@ const Introduction = () => {
                 target="_blank"
                 className="text-lg font-medium hover:text-black underline underline-offset-4 flex items-center"
               >
-                Descargar CV
+                {t('intro.downloadCV')}
               </a>
             </div>
           </div>
