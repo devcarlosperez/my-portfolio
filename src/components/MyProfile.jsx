@@ -28,6 +28,7 @@ const MyProfile = () => {
                             <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" className="h-8"/>
                             <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" className="h-8"/>
                             <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" className="h-8"/>
+                            <img src="https://img.shields.io/badge/odoo-%232E7D32.svg?style=for-the-badge&logo=odoo&logoColor=white" alt="Odoo" className="h-8"/>
                         </div>
                    </div>
                    
@@ -58,7 +59,7 @@ const MyProfile = () => {
                                         <i className="fa-solid fa-check text-green-500 text-sm"></i> Desarrollo APIs REST
                                     </li>
                                     <li className="flex items-center gap-2 text-gray-700">
-                                        <i className="fa-solid fa-check text-green-500 text-sm"></i> Metodologías Ágiles
+                                        <i className="fa-solid fa-check text-green-500 text-sm"></i> Programación Orientada a Objetos
                                     </li>
                                     <li className="flex items-center gap-2 text-gray-700">
                                         <i className="fa-solid fa-check text-green-500 text-sm"></i> Bases de Datos SQL

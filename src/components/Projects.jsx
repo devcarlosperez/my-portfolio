@@ -11,7 +11,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "The Lord Of The Rings",
+      title: "The Lord Of The Rings Wiki",
       image: "/lord-of-the-rings.webp",
       github: "https://github.com/devcarlosperez/the-lord-of-the-rings-project",
       live: "https://lord-of-the-rings-4444a.web.app/characters"
