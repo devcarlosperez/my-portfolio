@@ -27,7 +27,13 @@
     "oop": "Programación Orientada a Objetos",
     "sql": "Bases de Datos SQL",
     "responsive": "Diseño Responsive",
+    "mvc": "MVC",
     "softSkills": "Habilidades Blandas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "versionControl": "Control de Versiones",
+    "tools": "Herramientas",
     "softDesc": "Mis fortalezas personales que aporto al equipo de trabajo para fomentar un ambiente productivo y colaborativo.",
     "proactivity": "Proactividad",
     "proactivityDesc": "Iniciativa para anticipar necesidades y proponer soluciones.",
@@ -55,5 +61,5 @@
     "availabilityDesc": "Abierto a oportunidades de trabajo",
     "social": "Redes Sociales"
   },
-  "footer": "Copyright © 2026 devcarlosperez. All Rights Reserved."
+  "footer": "Copyright © 2026 devcarlosperez. Todos los derechos reservados."
 }

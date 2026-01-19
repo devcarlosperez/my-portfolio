@@ -19,18 +19,22 @@ const MyProfile = () => {
                             <i className="fa-solid fa-laptop-code text-gray-700"></i> {t('profile.technologies')}
                         </h3>
                         <div className="flex flex-wrap gap-x-3 gap-y-4">
+                            <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" className="h-8"/>
+                            <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" className="h-8"/>
+                            <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" className="h-8"/>
                             <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" className="h-8"/>
+                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" className="h-8"/>
                             <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" className="h-8"/>
                             <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js" className="h-8"/>
-                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" className="h-8"/>
                             <img src="https://img.shields.io/badge/oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" className="h-8"/>
-                            <img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" alt="Firebase" className="h-8"/>
-                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" className="h-8"/>
-                            <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" className="h-8"/>
-                            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" className="h-8"/>
+                            <img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" className="h-8"/>
+                            <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" className="h-8"/>
                             <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" className="h-8"/>
                             <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" className="h-8"/>
-                            <img src="https://img.shields.io/badge/odoo-%232E7D32.svg?style=for-the-badge&logo=odoo&logoColor=white" alt="Odoo" className="h-8"/>
+                            <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d4.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" className="h-8"/>
+                            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" className="h-8"/>
+                            <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" className="h-8"/>
+                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" className="h-8"/>
                         </div>
                    </div>
                    
@@ -61,7 +65,7 @@ const MyProfile = () => {
                                         <i className="fa-solid fa-check text-green-500 text-sm"></i> {t('profile.apiDev')}
                                     </li>
                                     <li className="flex items-center gap-2 text-gray-700">
-                                        <i className="fa-solid fa-check text-green-500 text-sm"></i> {t('profile.oop')}
+                                        <i className="fa-solid fa-check text-green-500 text-sm"></i> {t('profile.mvc')}
                                     </li>
                                     <li className="flex items-center gap-2 text-gray-700">
                                         <i className="fa-solid fa-check text-green-500 text-sm"></i> {t('profile.sql')}
@@ -87,7 +91,7 @@ const MyProfile = () => {
                                 {t('profile.softDesc')}
                             </p>
                             
-                            <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 gap-8">
                                {[
                                  { icon: "fa-lightbulb", title: t('profile.proactivity'), desc: t('profile.proactivityDesc') },
                                  { icon: "fa-people-group", title: t('profile.teamwork'), desc: t('profile.teamworkDesc') },
@@ -118,7 +122,7 @@ const MyProfile = () => {
                 <div className="relative pl-8 border-l-2 border-gray-200 space-y-10">
                     <div className="relative group">
                         {/* Dot */}
-                        <span className="absolute -left-[41px] top-1.5 h-5 w-5 rounded-full border-4 border-white bg-gray-900 group-hover:scale-110 transition-transform"></span>
+                        <span className="absolute -left-[43px] top-1.5 h-5 w-5 rounded-full border-4 border-white bg-gray-900 group-hover:scale-110 transition-transform"></span>
                         
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
                            <h4 className="text-xl font-bold text-gray-800">{t('profile.jobTitle')}</h4>
