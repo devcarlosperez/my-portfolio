@@ -21,22 +21,22 @@ const Introduction = () => {
   return (
     <section
       id="home"
-      className="min-h-screen pt-32 pb-16 flex items-center justify-center bg-gray-50"
+      className="min-h-screen pt-32 pb-16 flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex flex-col-reverse min-[833px]:flex-row items-center gap-12 min-[833px]:gap-20">
           {/* Left Column: Info */}
           <div className="flex-1 text-center min-[833px]:text-left">
 
-            <h1 className="text-4xl min-[833px]:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-4xl min-[833px]:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
               <span className="typed-element"></span>
             </h1>
 
-            <h2 className="text-xl min-[833px]:text-2xl text-gray-600 font-medium mb-6">
+            <h2 className="text-xl min-[833px]:text-2xl text-gray-600 dark:text-gray-300 font-medium mb-6">
               {t('intro.subtitle')}
             </h2>
 
-            <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-2xl mx-auto min-[833px]:mx-0">
+            <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl mx-auto min-[833px]:mx-0">
               {t('intro.description')}
             </p>
 
@@ -44,24 +44,24 @@ const Introduction = () => {
             <div className="flex flex-wrap justify-center min-[833px]:justify-start gap-4 mb-10">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-black hover:scale-105 transition-all duration-300"
+                className="px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold shadow-lg hover:bg-black dark:hover:bg-gray-100 hover:scale-105 transition-all duration-300"
               >
                 {t('intro.contactMe')}
               </a>
               <a
                 href="#projects"
-                className="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-semibold shadow hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-semibold shadow hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 transition-all duration-300 flex items-center gap-2"
               >
                 {t('intro.viewProjects')} <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
 
-            <div className="flex justify-center min-[833px]:justify-start gap-8 text-gray-600 items-center">
+            <div className="flex justify-center min-[833px]:justify-start gap-8 text-gray-600 dark:text-gray-400 items-center">
               <a
                 href="https://github.com/devcarlosperez"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl hover:text-black transition-colors"
+                className="text-4xl hover:text-black dark:hover:text-white transition-colors"
                 aria-label="GitHub de Carlos Pérez"
               >
                 <i className="fa-brands fa-github"></i>
@@ -70,14 +70,14 @@ const Introduction = () => {
                 href="https://www.linkedin.com/in/carlos-p%C3%A9rez-santana-3967a83a5/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-4xl hover:text-blue-700 transition-colors"
+                className="text-4xl hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
                 aria-label="LinkedIn de Carlos Pérez"
               >
                 <i className="fa-brands fa-linkedin"></i>
               </a>
               <a
                 href="mailto:carlosperezsantana04@gmail.com"
-                className="text-4xl hover:text-red-500 transition-colors"
+                className="text-4xl hover:text-red-500 dark:hover:text-red-400 transition-colors"
                 aria-label="Enviar email a Carlos Pérez"
               >
                 <i className="fa-solid fa-envelope"></i>
@@ -86,7 +86,7 @@ const Introduction = () => {
                 href="/cv.pdf"
                 download="cv.pdf"
                 target="_blank"
-                className="text-lg font-medium hover:text-black underline underline-offset-4 flex items-center"
+                className="text-lg font-medium hover:text-black dark:hover:text-white underline underline-offset-4 flex items-center"
               >
                 {t('intro.downloadCV')}
               </a>
@@ -97,10 +97,10 @@ const Introduction = () => {
           <div className="flex-1 flex justify-center min-[833px]:justify-end relative">
             <div className="relative w-72 h-72 min-[833px]:w-100 min-[833px]:h-100">
               {/* Blob background */}
-              <div className="absolute inset-0 bg-gray-200 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-[blob_7s_infinite] opacity-50"></div>
+              <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-[blob_7s_infinite] opacity-50"></div>
 
               {/* Image container */}
-              <div className="absolute inset-2 bg-white rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-white flex items-center justify-center">
+              <div className="absolute inset-2 bg-white dark:bg-gray-800 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 flex items-center justify-center">
                 <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding animation" className="w-full h-full object-cover rounded-[60%_40%_30%_70%/60%_30%_70%_40%]" />
               </div>
             </div>

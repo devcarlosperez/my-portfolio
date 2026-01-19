@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../hooks/useTheme';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -33,13 +35,13 @@ const Header = () => {
   };
 
   const getLinkClasses = (section) => `text-base font-medium transition-colors ${
-    activeSection === section ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500'
+    activeSection === section ? 'text-blue-600 font-bold' : 'text-neutral-800 hover:text-neutral-500 dark:text-gray-200 dark:hover:text-blue-400'
   }`;
 
   return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-neutral-50/90 backdrop-blur-sm shadow-sm transition-all duration-300">
+    <header className="fixed w-full top-0 left-0 z-50 bg-neutral-50/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm transition-all duration-300">
       <nav className="container mx-auto px-6 h-16 flex justify-between items-center relative">
-        <a href="#home" className="text-neutral-800 font-semibold text-xl">devcarlosperez</a>
+        <a href="#home" className="text-neutral-800 dark:text-white font-semibold text-xl">devcarlosperez</a>
         
         {/* Desktop Menu */}
         <div className="hidden min-[833px]:flex items-center gap-8">
@@ -59,16 +61,28 @@ const Header = () => {
           </ul>
           <button 
             onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')} 
-            className="text-neutral-800 hover:text-blue-600 transition-colors font-medium flex items-center gap-2 cursor-pointer"
+            className="text-neutral-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium flex items-center gap-2 cursor-pointer"
             aria-label="Cambiar idioma"
           >
             <i className="fa-solid fa-globe text-lg"></i>
             <span>{i18n.language === 'es' ? 'EN' : 'ES'}</span>
           </button>
+          
+          <button
+            onClick={toggleTheme}
+            className="text-neutral-800 dark:text-yellow-400 hover:text-blue-600 dark:hover:text-yellow-300 transition-colors cursor-pointer"
+            aria-label="Alternar tema"
+          >
+             {theme === 'light' ? (
+                <i className="fa-solid fa-moon text-lg"></i>
+             ) : (
+                <i className="fa-solid fa-sun text-lg"></i>
+             )}
+          </button>
         </div>
         
         {/* Mobile Menu Button - Hamburger */}
-        <div className="min-[833px]:hidden text-neutral-800">
+        <div className="min-[833px]:hidden text-neutral-800 dark:text-white">
            <button onClick={() => setIsOpen(true)} className="focus:outline-none cursor-pointer" aria-label="Abrir menú">
              <i className="fa-solid fa-bars text-2xl"></i>
            </button>
@@ -111,6 +125,25 @@ const Header = () => {
               >
                 <i className="fa-solid fa-globe text-xl"></i>
                 <span>{i18n.language === 'es' ? 'English' : 'Español'}</span>
+              </button>
+            </li>
+            
+            <li>
+              <button 
+                onClick={() => { toggleTheme(); setIsOpen(false); }} 
+                className="w-full text-left flex items-center gap-3 text-lg font-medium text-neutral-800 hover:text-neutral-500 pb-2 cursor-pointer"
+              >
+                {theme === 'light' ? (
+                    <>
+                        <i className="fa-solid fa-moon text-xl"></i>
+                        <span>Modo Oscuro</span>
+                    </>
+                ) : (
+                    <>
+                        <i className="fa-solid fa-sun text-xl text-yellow-500"></i>
+                         <span>Modo Claro</span>
+                    </>
+                )}
               </button>
             </li>
           </ul>
