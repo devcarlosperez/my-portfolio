@@ -28,7 +28,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Library Manager",
-      image: "/library.webp",
+      image: "/library.png",
       github: "https://github.com/devcarlosperez/Biblioteca",
       live: null
     }
