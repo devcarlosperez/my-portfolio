@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
     const [theme, setTheme] = useState(() => {
-        // 1. Try to get from localStorage
+        // Try to get from localStorage
         if (typeof window !== 'undefined') {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 return savedTheme;
             }
         }
-        // 2. Default to light mode
+        //  Default to light mode
         return 'light';
     });
 
     useEffect(() => {
-        // 3. Apply 'dark' class to the root HTML element
+        // Apply 'dark' class to the root HTML element
         const root = window.document.documentElement;
         if (theme === 'dark') {
             root.classList.add('dark');
@@ -22,7 +22,7 @@ export const useTheme = () => {
             root.classList.remove('dark');
         }
         
-        // 4. Save choice to localStorage
+        // Save choice to localStorage
         localStorage.setItem('theme', theme);
     }, [theme]);
 
