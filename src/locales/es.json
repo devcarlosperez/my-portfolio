@@ -8,7 +8,7 @@
   "intro": {
     "greeting": "¡Hola! Soy<br/>Carlos",
     "subtitle": "Desarrollador Junior | React + Node.js | APIs REST",
-    "description": "Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web funcionales, robustas y escalables. Busco mi primera oportunidad para aportar valor y seguir creciendo profesionalmente.",
+    "description": "Soy estudiante de Desarrollo de Aplicaciones Web, apasionado por la tecnología. Poseo las capacidades idóneas para desempeñar roles en desarrollo web, incluyendo la creación de interfaces con React, desarrollo de APIs REST con Node.js y gestión de bases de datos SQL. Busco oportunidades para aportar valor y crecer profesionalmente.",
     "contactMe": "Contáctame",
     "downloadCV": "Descargar CV",
     "viewProjects": "Ver Proyectos"
@@ -27,7 +27,13 @@
     "oop": "Programación Orientada a Objetos",
     "sql": "Bases de Datos SQL",
     "responsive": "Diseño Responsive",
+    "mvc": "MVC",
     "softSkills": "Habilidades Blandas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "versionControl": "Control de Versiones",
+    "tools": "Herramientas",
     "softDesc": "Mis fortalezas personales que aporto al equipo de trabajo para fomentar un ambiente productivo y colaborativo.",
     "proactivity": "Proactividad",
     "proactivityDesc": "Iniciativa para anticipar necesidades y proponer soluciones.",
@@ -55,5 +61,5 @@
     "availabilityDesc": "Abierto a oportunidades de trabajo",
     "social": "Redes Sociales"
   },
-  "footer": "Copyright © 2026 devcarlosperez. All Rights Reserved."
+  "footer": "Copyright © 2026 devcarlosperez. Todos los derechos reservados."
 }

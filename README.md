@@ -1,6 +1,6 @@
 # Portfolio
 
-A personal portfolio website showcasing my skills, projects, and professional experience as a Junior Developer specializing in React, Node.js, and REST APIs. This project is designed to be responsive, accessible, and supports multiple languages (English and Spanish).
+A personal portfolio website showcasing my skills, projects, and professional experience as a Junior Developer specializing in React, Node.js, and REST APIs. This project is designed to be responsive, accessible, supports dark mode, and multiple languages (English and Spanish).
 
 ---
 
@@ -11,6 +11,7 @@ This application serves as a digital curriculum vitae and showcase. It includes 
 - **My Profile**: Details about my technical skills (hard skills), soft skills, languages, and work experience.
 - **Projects**: A gallery of my recent web development projects with links to GitHub repositories and live demos.
 - **Contact**: Information on how to reach me, including social media links and a contact form or details.
+- **Settings**: Users can toggle between Light and Dark mode, and switch languages (EN/ES).
 
 ---
 

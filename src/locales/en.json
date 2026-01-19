@@ -8,7 +8,7 @@
   "intro": {
     "greeting": "Hello! I'm<br/>Carlos",
     "subtitle": "Junior Developer | React + Node.js | REST APIs",
-    "description": "I am a Web Application Development student, passionate about technology and innovation. I specialize in creating functional, robust, and scalable web applications. I am looking for my first opportunity to add value and continue growing professionally.",
+    "description": "I am a Web Application Development student, passionate about technology. I possess the ideal capabilities to perform web development roles, including creating interfaces with React, developing REST APIs with Node.js, and managing SQL databases. I seek opportunities to add value and grow professionally.",
     "contactMe": "Contact Me",
     "downloadCV": "Download CV",
     "viewProjects": "View Projects"
@@ -27,7 +27,13 @@
     "oop": "Object-Oriented Programming",
     "sql": "SQL Databases",
     "responsive": "Responsive Design",
+    "mvc": "MVC",
     "softSkills": "Soft Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "versionControl": "Version Control",
+    "tools": "Tools",
     "softDesc": "My personal strengths that I bring to the team to foster a productive and collaborative environment.",
     "proactivity": "Proactivity",
     "proactivityDesc": "Initiative to anticipate needs and propose solutions.",

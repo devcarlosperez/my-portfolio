@@ -28,14 +28,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t('projects.title')}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">{t('projects.title')}</h2>
         
         <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-square bg-gray-100 relative group">
+            <div key={project.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] bg-white dark:bg-gray-800 rounded-[2rem] border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="rounded-[1.5rem] overflow-hidden mb-6 aspect-square bg-gray-100 dark:bg-gray-700 relative group">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -43,14 +43,14 @@ const Projects = () => {
                 />
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-6">{project.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-6">{project.title}</h3>
               
               <div className="flex justify-center gap-4">
                 <a 
                   href={project.github} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                  className="px-6 py-2 rounded-full border border-gray-900 dark:border-white text-gray-900 dark:text-white font-medium hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors duration-300"
                 >
                   {t('projects.github')}
                 </a>
@@ -58,7 +58,7 @@ const Projects = () => {
                   href={project.live} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                  className="px-6 py-2 rounded-full border border-gray-900 dark:border-white text-gray-900 dark:text-white font-medium hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors duration-300"
                 >
                   {t('projects.live')}
                 </a>

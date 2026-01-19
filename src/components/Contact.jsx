@@ -4,38 +4,38 @@ import { useTranslation } from 'react-i18next';
 const Contact = () => {
   const { t } = useTranslation();
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t('contact.title')}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">{t('contact.title')}</h2>
         
         <div className="flex flex-col min-[833px]:flex-row items-center gap-20 max-w-4xl mx-auto">
           {/* Left: Contact Info */}
-          <div className="flex-1">
-            <div className="bg-white rounded-[2rem] border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-center">
+          <div className="flex-1 w-full">
+            <div className="bg-white dark:bg-gray-800 rounded-[2rem] border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-center">
               <div className="space-y-8">
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.email')}</h3>
-                  <p className="text-gray-600 text-sm md:text-base">carlosperezsantana04@gmail.com</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{t('contact.email')}</h3>
+                  <a href="mailto:carlosperezsantana04@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm md:text-base">carlosperezsantana04@gmail.com</a>
                 </div>
                 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.location')}</h3>
-                  <p className="text-gray-600 text-sm md:text-base">Las Palmas de Gran Canaria, Gran Canaria</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{t('contact.location')}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Las Palmas de Gran Canaria, Gran Canaria</p>
                 </div>
                 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.availability')}</h3>
-                  <p className="text-gray-600 text-sm md:text-base">{t('contact.availabilityDesc')}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{t('contact.availability')}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">{t('contact.availabilityDesc')}</p>
                 </div>
 
                 <div className="text-center md:text-left">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('contact.social')}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('contact.social')}</h3>
                   <div className="flex justify-center md:justify-start gap-6">
                     <a 
                       href="https://github.com/devcarlosperez" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-black transition-colors text-2xl"
+                      className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-2xl"
                       aria-label="GitHub de Carlos Pérez"
                     >
                       <i className="fa-brands fa-github"></i>
@@ -44,7 +44,7 @@ const Contact = () => {
                       href="https://www.linkedin.com/in/carlos-p%C3%A9rez-santana-3967a83a5/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-700 transition-colors text-2xl"
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-2xl"
                       aria-label="LinkedIn de Carlos Pérez"
                     >
                       <i className="fa-brands fa-linkedin"></i>
@@ -57,7 +57,7 @@ const Contact = () => {
           
           {/* Right: GIF */}
           <div className="flex-1 max-w-full">
-            <div className="bg-white rounded-full overflow-hidden shadow-2xl border-4 border-white h-96 aspect-square max-w-full">
+            <div className="bg-white dark:bg-gray-800 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 h-96 aspect-square max-w-full mx-auto md:mx-0">
               <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWM0bmJod282eWZ5N3E3ZnM3bzVrcTl1bHRhd29ubW4ydm83aDh2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ptqAPgghLtHOa0SLJS/giphy.gif" alt="Contact animation" className="w-full h-full object-cover" />
             </div>
           </div>
