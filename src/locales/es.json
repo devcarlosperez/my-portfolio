@@ -61,5 +61,9 @@
     "availabilityDesc": "Abierto a oportunidades de trabajo",
     "social": "Redes Sociales"
   },
+  "theme": {
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro"
+  },
   "footer": "Copyright © 2026 devcarlosperez. Todos los derechos reservados."
 }
