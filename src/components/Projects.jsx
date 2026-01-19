@@ -24,6 +24,13 @@ const Projects = () => {
       image: "/hello-japan.webp",
       github: "https://github.com/devcarlosperez/japan-project",
       live: "https://hellojapan-3523b.web.app/index.html"
+    },
+    {
+      id: 4,
+      title: "Library Manager",
+      image: "/library.webp",
+      github: "https://github.com/devcarlosperez/Biblioteca",
+      live: null
     }
   ];
 
@@ -54,14 +61,16 @@ const Projects = () => {
                 >
                   {t('projects.github')}
                 </a>
-                <a 
-                  href={project.live} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 rounded-full border border-gray-900 dark:border-white text-gray-900 dark:text-white font-medium hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors duration-300"
-                >
-                  {t('projects.live')}
-                </a>
+                {project.live && (
+                  <a 
+                    href={project.live} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-6 py-2 rounded-full border border-gray-900 dark:border-white text-gray-900 dark:text-white font-medium hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-colors duration-300"
+                  >
+                    {t('projects.live')}
+                  </a>
+                )}
               </div>
             </div>
           ))}
