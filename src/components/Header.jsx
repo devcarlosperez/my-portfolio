@@ -136,12 +136,12 @@ const Header = () => {
                 {theme === 'light' ? (
                     <>
                         <i className="fa-solid fa-moon text-xl"></i>
-                        <span>Modo Oscuro</span>
+                        <span>{t('theme.darkMode')}</span>
                     </>
                 ) : (
                     <>
                         <i className="fa-solid fa-sun text-xl text-yellow-500"></i>
-                         <span>Modo Claro</span>
+                         <span>{t('theme.lightMode')}</span>
                     </>
                 )}
               </button>
